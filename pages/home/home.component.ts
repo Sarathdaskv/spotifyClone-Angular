@@ -8,7 +8,7 @@ import { SearchBarService } from 'src/app/services/search-bar.service';
 })
 export class HomeComponent {
 
-
+searchContent:boolean=false;
   songLists=[
     {
       song_id:1,
@@ -48,9 +48,11 @@ export class HomeComponent {
   onNavigates(params:string){
     if(params=='search'){
       this.searchBar.isSearchBarVisible.next(true);
+      this.searchContent=true;
     }
     else{
       this.searchBar.isSearchBarVisible.next(false);
+      this.searchContent=false;
     }
   }
 }

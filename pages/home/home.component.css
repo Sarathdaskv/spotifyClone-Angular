@@ -31,4 +31,8 @@
 /* .spotify_Home_Container_playList_Container{
     padding-left: 0px;
 } */
-
+.searchContainer{
+    background-color: #191919;
+    
+    overflow-y: auto;
+}
