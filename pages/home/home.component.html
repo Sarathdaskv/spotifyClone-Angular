@@ -1,0 +1,47 @@
+
+<div class="spotify_Home_Container row ">
+    <div class="spotify_Home_Container_SideBar col-lg-3 col-sm-3  col-md-2  " >
+        <div class="spotify_Home_Container_SideBar_item">
+            <img class=" m-3 text-left " width="100"
+             src="assets/spotify_light.png" alt="spotify light logo">
+        </div>
+        <div class="spotify_Home_Container_SideBar_item" (click)="onNavigates('home')">
+            <a>Home</a>
+        </div>
+        <div class="spotify_Home_Container_SideBar_item" (click)="onNavigates('search')">
+            <a>Search</a>
+        </div>
+        <div class="spotify_Home_Container_SideBar_item" (click)="onNavigates('library')">
+            <a>Your Library</a>
+        </div>
+        <div class="spotify_Home_Container_SideBar_item" (click)="onNavigates('createPlaylisr')">
+            <a>Create PlayList</a>
+        </div>
+    </div>
+    <div class="spotify_Home_Container_playList_Container col-lg-9 col-sm-9 col-md-10">
+        <app-top-nav></app-top-nav>
+        <div class=" container-fluid ">
+            <h4 [style.color]="'white'" [style.padding]="'10px'">Spotify Playlists</h4>
+            <div class="songCollection row  " style="overflow-y: auto;">
+            <div *ngFor="let item of songLists" class="col-sm-12 col-lg-3 col-md-6 p-1 " >
+                    <app-song-cart [title]="item.title"
+                    [photoThumbnail]="item.photoThumbnail"
+                    [description]="item.description"
+                    [song_id]="item.song_id"
+                    [songLink]="item.songLink"
+                    ></app-song-cart>
+                </div>
+            </div>
+        </div>
+        <div class=" container-fluid ">
+            <h4 [style.color]="'white'" [style.padding]="'10px'">New Playlists</h4>
+            <div class="songCollection row  " style="overflow-y: auto;">
+            <div *ngFor="let item of songLists" class="col-sm-12 col-lg-3 col-md-6 p-1 " >
+                    <app-song-cart [title]="item.title"
+                    [photoThumbnail]="item.photoThumbnail"
+                    [description]="item.description"></app-song-cart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

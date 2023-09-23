@@ -1,0 +1,14 @@
+ .spotify_sond_card{
+    background-color: #202020;
+    border-radius: 8%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+
+.spotify_sond_card> img{
+    max-height: 15rem;
+}
+
+.card-body{
+    color: white;
+}  

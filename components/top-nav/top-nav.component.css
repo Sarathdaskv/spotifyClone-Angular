@@ -1,0 +1,53 @@
+.spotify_topNav{
+    background-color:#131313;
+    height: 10vh;
+    padding-left: 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+    display: flex;
+       justify-content: space-between;   
+    align-items: center;
+    font-size: 18px; 
+}
+.spotify_topNav_focus{
+    /* justify-content: start; */
+    color: gray;
+    font-weight: bold;
+    
+}
+
+.topNavLoginSection{
+     display: flex;
+     justify-content: space-around; 
+     align-items: center;
+}
+.spotify_topNav_login > button{
+    color: black; 
+    background-color: white; 
+    border-radius: 30px;
+    
+}
+#searchBox > input{
+width: 18rem;
+}
+
+#searchBox > input::placeholder{
+    font-size: small;
+    text-align: center;
+}
+
+
+.has-search .form-control {
+    padding-left: 3rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
