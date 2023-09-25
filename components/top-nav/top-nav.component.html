@@ -1,16 +1,18 @@
-
 <div class="spotify_topNav ">
     <div class="spotify_topNav_focus m-3 d-flex">
-       <h4 class="me-3"> Focus</h4>
+        <h4 class="me-3"> Focus</h4>
         <div id="searchBox" *ngIf="isSearchVisible">
             <!-- <img width="20" height="20" src="https://img.icons8.com/ios-filled/100/000000/search--v1.png" alt="search--v1"/>
             <input  class="ms-2  rounded-pill border-light bg-transparent" type="search" placeholder="What do you want to listen?"> -->
             <div class="form-group has-search">
                 <span class="fa fa-search form-control-feedback ms-2"></span>
-                <input type="text" class="form-control ms-2  rounded-pill border-light bg-transparent" placeholder="What do you want to listen?">
-              </div>
+                <input type="text" class="form-control ms-2  rounded-pill border-light bg-transparent"
+                    placeholder="What do you want to listen?"
+                    #inputSearchRef
+                    (keyup)="onInputSearch(inputSearchRef)">
+            </div>
         </div>
-    
+
     </div>
     <!-- <div class="spotify_topNav_auth"></div> -->
     <div class="topNavLoginSection ">

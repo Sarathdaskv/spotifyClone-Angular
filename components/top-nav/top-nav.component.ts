@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { SearchBarService } from 'src/app/services/search-bar.service';
 
@@ -8,10 +9,13 @@ import { SearchBarService } from 'src/app/services/search-bar.service';
   styleUrls: ['./top-nav.component.css']
 })
 export class TopNavComponent {
-  isSearchVisible:boolean=false;
-  constructor(private router: Router,private searchBar:SearchBarService ) {
-    this.searchBar.isSearchBarVisible.subscribe(status=>{
-      this.isSearchVisible=status;
+  isSearchVisible: boolean = false;
+  @Output() inputSearchRef: EventEmitter<string> = new EventEmitter<string>();
+
+
+  constructor(private router: Router, private searchBar: SearchBarService) {
+    this.searchBar.isSearchBarVisible.subscribe(status => {
+      this.isSearchVisible = status;
     })
   }
 
@@ -19,4 +23,8 @@ export class TopNavComponent {
     this.router.navigate(['/', 'login']);
   }
 
+  onInputSearch(searchValue: HTMLInputElement) {
+    this.inputSearchRef.emit(searchValue.value);
+  }
 }
+

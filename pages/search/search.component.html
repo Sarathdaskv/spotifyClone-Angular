@@ -1,5 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <app-top-nav (inputSearchRef)="searchInputRef($event)" ></app-top-nav>
 <div class=" container " [ngStyle]="{'height':'100vh'}">
     <h4 [style.color]="'white'" [style.padding]="'10px'">Browse All</h4>
     <div class="individual row  " style="overflow-y: auto;">
